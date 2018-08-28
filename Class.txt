@@ -1,0 +1,19 @@
+
+# https://www.2cto.com/shouce/Pythonbbf/ex45.html  : 对象、类、以及从属关系.
+
+class Student(object):                           # 通过定义一个特殊的__init__方法，在创建实例的时候，就把name，score等属性绑上去
+    def __init__(self, name, gender):           # 由于类可以起到模板的作用，因此，可以在创建实例的时候，把一些我们认为必须绑定的属性强制填写进去。
+        self.__name = name
+        self.__gender = gender                     # 将实例 name,gender 设置为私有变量（private）,只可类内部访问
+
+    def get_gender(self):
+        return self.__gender
+                                                        # 创建 get_gender 作为中间变量将实例传出类，连接外部与类内部
+    def get_name (self):
+        return self.__name
+
+    def set_gender (self,gender):                       # 创建 set_gender 作为中间变量修改实例，连接外部与类内部
+        self.__gender = gender
+                                                            # 如果要调用类中的某个属性，前面必须加上 self 
+    def set_name (self,name) :
+        self.__name = name
