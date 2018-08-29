@@ -21,7 +21,7 @@ else:
 
 print(lisa.name)
 
-te = ['22','docs','谢']
+te = ['22','docs','测试']
 if input('input : ') not in te :
     print('不在')
 else:
