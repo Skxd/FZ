@@ -1,3 +1,4 @@
+import time
 low = int(input('input lower limit :'))                         # 用户输入上下限
 up = int(input('input upper limit :'))
 count = 0                                                       # 计数器，累加素数个数
@@ -10,4 +11,5 @@ for val in range(low,up) :                                      # 从下限值�
         count += 1
         print('This',count,'th prime number. ','is :',val)
         dict[count] = val
-print(dict)
+#print(dict)
+print('运行时间:',time.perf_counter())
